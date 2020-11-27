@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: {
-    enabled: true,
+    // enabled: true,
     content: ['./src/**/*.svelte', './src/**/*.html'],
   },
   darkMode: false, // or 'media' or 'class'
@@ -10,10 +10,10 @@ module.exports = {
     colors: {
       ...colors,
     },
-    fontFamily: {
-      display: ['Poppins', 'system-ui', 'sans-serif'],
-    },
     extend: {
+      fontFamily: {
+        display: ['Poppins', 'system-ui', 'sans-serif'],
+      },
       gridTemplateColumns: {
         login: '100%',
         'login-sm': '1fr minmax(min-content,640px) 1fr',
@@ -29,6 +29,9 @@ module.exports = {
       },
       spacing: {
         full: '100%',
+      },
+      zIndex: {
+        '-10': -10,
       },
     },
   },

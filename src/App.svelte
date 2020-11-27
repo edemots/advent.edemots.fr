@@ -23,7 +23,7 @@
 
 <style lang="postcss">
   :global(html) {
-    @apply bg-white text-gray-500 antialiased;
+    @apply bg-white text-gray-500 antialiased overflow-x-hidden;
   }
   main {
     @apply max-w-screen-lg mx-auto;

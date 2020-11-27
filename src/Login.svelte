@@ -26,6 +26,7 @@
 </script>
 
 <section>
+  <span class="illustration" />
   <article>
     <div class="background">
       <div class="gray" />
@@ -74,6 +75,11 @@
 <style lang="postcss">
   section {
     @apply h-screen flex items-center;
+
+    span.illustration {
+      @apply absolute inset-0 bg-no-repeat bg-right-bottom bg-cover;
+      background-image: url('/images/Waihou.svg');
+    }
 
     article {
       @apply w-full grid grid-cols-login grid-rows-login;

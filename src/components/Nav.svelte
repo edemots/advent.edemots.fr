@@ -10,14 +10,14 @@
 
 <style lang="postcss">
   nav {
-    @apply flex items-baseline justify-end py-4;
+    @apply absolute inset-x-0 flex items-baseline justify-end py-4 z-50;
 
     button {
-      @apply py-2 px-4 border-2 border-red-500 text-red-500 rounded-xl transition-colors duration-200 ease-out;
+      @apply py-2 px-4 bg-red-100 text-red-600 rounded-xl transition-colors duration-200 ease-out shadow-lg;
 
       &:hover,
       &:focus {
-        @apply bg-red-100 text-red-900;
+        @apply bg-red-50;
       }
     }
   }
