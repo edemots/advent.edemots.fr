@@ -6,8 +6,8 @@
   import { database } from './lib/firebase'
   import CalendarCard from './components/CalendarCard.svelte'
 
-  // TODO remove '0' ||
-  const day = '23' || String(new Date().getDate() - 1)
+  let day = String(new Date().getDate() - 1)
+  if (day > 23) day = 23
   const dataRef = database.ref('data/' + day)
 
   let data
