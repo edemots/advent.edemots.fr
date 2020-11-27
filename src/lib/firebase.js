@@ -4,11 +4,11 @@ import 'firebase/database'
 import 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: appProcess.env.FIREBASE_API_KEY,
-  authDomain: appProcess.env.FIREBASE_AUTH_DOMAIN,
-  databaseURL: appProcess.env.DATABASE_URL,
-  projectId: appProcess.env.FIREBASE_PROJECT_ID,
-  storageBucket: appProcess.env.STORAGE_BUCKET,
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
 }
 
 firebase.initializeApp(firebaseConfig)

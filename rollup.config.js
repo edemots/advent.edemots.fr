@@ -1,7 +1,6 @@
 import svelte from 'rollup-plugin-svelte'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import replace from '@rollup/plugin-replace'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
 import sveltePreprocess from 'svelte-preprocess'
@@ -66,14 +65,6 @@ export default {
       dedupe: ['svelte'],
     }),
     commonjs(),
-
-    replace({
-      appProcess: JSON.stringify({
-        env: {
-          ...conf.parsed,
-        },
-      }),
-    }),
 
     // In dev mode, call `npm run start` once
     // the bundle has been generated
